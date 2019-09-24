@@ -1,9 +1,15 @@
 FROM centos:latest
 
-VOLUME [ "/data" ]
+VOLUME [ "/host" ]
 
 RUN yum -y update && \
-    yum -y install telnet net-tools bind-utils vim-enhanced openssh-clients openldap-clients && \
-    yum clean all
+    yum -y install \
+      vim-enhanced \
+      telnet \
+      net-tools \
+      bind-utils \
+      openssh-clients \
+      openldap-clients \
+    && yum clean all
 
 CMD ["bash", "-c", "while true; do echo Alive; sleep 10; done"]
