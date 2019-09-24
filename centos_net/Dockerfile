@@ -9,6 +9,7 @@ RUN yum -y update && \
       net-tools \
       nc \
       bind-utils \
+      openssl \
       openssh-clients \
       openldap-clients \
     && yum clean all
