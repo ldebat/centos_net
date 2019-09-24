@@ -7,6 +7,7 @@ RUN yum -y update && \
       vim-enhanced \
       telnet \
       net-tools \
+      nc \
       bind-utils \
       openssh-clients \
       openldap-clients \
